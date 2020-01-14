@@ -36,5 +36,6 @@ public class SpriteMovement : MonoBehaviour
             transform.position += transform.right * JumpDistance;
             SpriteFacement.enabled = false;
         }
+       
     }
 }
