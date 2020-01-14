@@ -26,9 +26,6 @@ public class SpriteDisableMovement : MonoBehaviour
         {
             EasterEgg.SetActive(false);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+ 
     }
 }
