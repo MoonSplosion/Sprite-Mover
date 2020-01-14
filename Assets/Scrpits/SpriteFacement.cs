@@ -15,6 +15,24 @@ public class SpriteFacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.up * Time.deltaTime * movementspeed;
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            transform.position += transform.up * Time.deltaTime * movementspeed;
+        }
+
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            transform.position -= transform.up * Time.deltaTime * movementspeed;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += transform.right * Time.deltaTime * movementspeed;
+        }
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position -= transform.right * Time.deltaTime * movementspeed;
+        }
     }
 }
