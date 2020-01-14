@@ -7,7 +7,6 @@ public class SpriteFacement : MonoBehaviour
     public Transform Transform;
     public float movementspeed = 1.0f;
 
-    public float MyVector = .2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +16,7 @@ public class SpriteFacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 Origin = new Vector2(0, 0);
         if (Input.GetKey(KeyCode.UpArrow))
         {
             transform.position += transform.up * Time.deltaTime * movementspeed;
@@ -36,12 +36,10 @@ public class SpriteFacement : MonoBehaviour
         {
             transform.position -= transform.right * Time.deltaTime * movementspeed;
         }
-        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.Space))
         {
-            transform.position += transform.up * MyVector;
+            transform.position = Origin;
         }
-        {
 
-        }
     }
 }
