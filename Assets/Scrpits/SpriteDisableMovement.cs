@@ -6,7 +6,7 @@ public class SpriteDisableMovement : MonoBehaviour
 {
     public SpriteFacement SpriteFreeMove;
     public SpriteMovement SpriteJumpMove;
-    public GameObject EasterEgg;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,10 +22,7 @@ public class SpriteDisableMovement : MonoBehaviour
             SpriteFreeMove.enabled = !SpriteFreeMove.enabled;
             SpriteJumpMove.enabled = !SpriteJumpMove.enabled;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            EasterEgg.SetActive(false);
-        }
+        
  
     }
 }
